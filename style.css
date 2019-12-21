@@ -1,0 +1,241 @@
+/* Set variables */
+:root {
+    --main-slate: rgba(68,76,92, 1);
+    --main-red: rgb(206, 90, 87, 1);
+    --main-green: rgba(120,165,163, 1);
+    --main-orange: rgba(225,177,106, 1);
+    --main-gray: rgba(170,170,170, 1);
+
+    --main-gray-5: rgba(170,170,170, .5);
+    --main-orange-5: rgba(225,177,106, .5);
+}
+
+/*GENERAL STYLES*/
+
+html, body {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    background-color: black;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row; 
+    font-size: 2rem;
+    font-family: Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav a {
+    display: block;
+    margin: 0 1rem 0 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* MAIN CONTAINER */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    min-height: 100vh;
+    background-color: var(--main-slate);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* CONTENT BOXES */
+.list-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 32rem;
+    width: 90vw;
+    min-height: 50rem;
+    margin: 1rem;
+    background-color: #F9F9F9;
+
+    font-size: 1.4rem;
+}
+
+.box-title {
+    text-align: center;
+    font-family: 'Oswald', 'Helvetica';
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    word-spacing: -2px;
+    color: var(--main-red);
+    /* text-shadow: 
+        -1px -1px 0 firebrick,
+        -2px -2px 0 firebrick,
+        -3px -3px 0 firebrick,
+        -4px -4px 0 firebrick,
+        -20px 10px 20px dimgrey; */
+    text-decoration: underline;
+}
+
+.box h2 {
+    text-align: center;
+}
+
+/* Shopping List */
+
+.shopping-list {
+    padding-left: 0;
+    margin-left: 0;
+
+}
+
+.shopping-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 35rem;
+    
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    max-width: 100%;
+    min-width: 30rem;
+    height: auto;
+    padding: 1rem 1rem 1rem 1rem;
+    border-bottom: 1px dotted black;
+    font-family: Helvetica, Arial;
+    font-size: 1.8rem;
+}
+
+/* BUTTONS */
+#input-section {
+    display: flex;
+    flex-direction: column;
+    
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-green);
+}
+
+.box-input {
+    align-self: center;
+    min-width: 25rem;
+    max-width: 35rem;
+    height: 3rem;
+    margin-top: 1rem;
+    background-color: var(--main-green);
+    border: 0px;
+    border-bottom: 1px solid black;
+    font-size: 1.8rem;
+}
+
+.main-button {
+    width: 16rem;
+    max-height: 5rem;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    background-color: var(--main-red);
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    color: black;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: var(--main-slate);
+    color: whitesmoke;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.delete-button {
+    justify-self: flex-end;
+    min-width: 8rem;
+    margin-left: 1rem;
+    background-color: var(--main-red);
+    padding: .5rem 1rem .5rem 1rem;
+    border: 0px;
+    border-radius: 2px;
+    font-size: 1.5rem;
+}
+
+.delete-button:hover {
+    background-color: var(--main-slate);
+    color: whitesmoke;
+    transition: background-color: .1s ease-in-out, 
+                color .1s ease-in-out;
+}
+
+/* LIST STYLE */
+
+
+.shopping-list li:hover {
+    cursor: pointer;
+    background-color: var(--main-orange-5);
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+/* FOOTER */
+footer {
+    height: 10vh;
+    background-color: black;
+
+}
+
+/* Breakpoints */
+
+@media only screen and (min-width: 800px) {
+    .list-box {
+        width: 60vw;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .list-box {
+        width: 75vw;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    html {
+        font-size: 9.5px;
+    }
+    .list-box {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    html {
+        font-size: 9px;
+    }
+    .list-box {
+        width: 95vw;
+    }
+}
