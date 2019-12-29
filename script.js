@@ -4,7 +4,7 @@ let button = document.querySelector("button");
 let enterButton = document.getElementById("enter");
 let shoppingListInput = document.getElementById("user-input");
 let shoppingList = document.getElementById("shopping-list");
-let shoppingListItem = document.getElementsByClassName("shopping-item");
+let shoppingListItem = document.querySelectorAll(".shopping-item span");
 let deleteButton = document.getElementsByClassName("delete-button");
 
 // Apply H2 styles dynamically (just for practice)
@@ -21,11 +21,13 @@ function inputLength(input) {
 
 function createListElement(list, input) {
     let li = document.createElement("li");
-    li.appendChild(document.createTextNode(input.value));
+    let span = document.createElement("span");
+    span.appendChild(document.createTextNode(input.value));
+    li.appendChild(span);
     list.appendChild(li);
     li.classList.add("shopping-item");
     input.value = "";
-    li.addEventListener('click', listItemComplete, false);
+    span.addEventListener('click', listItemComplete, false);
 
 
     let button = document.createElement("button");
@@ -50,8 +52,6 @@ function addListAfterKeyPress(event) {
 
 // Function for marking item complete
 function listItemComplete() {
-    console.log("hey");
-
     this.classList.toggle("done");
 };
 

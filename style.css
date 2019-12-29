@@ -76,6 +76,7 @@ main {
     margin: 1rem;
     background-color: #F9F9F9;
 
+    border-radius: 20px;
     font-size: 1.4rem;
 }
 
@@ -119,10 +120,17 @@ main {
     max-width: 100%;
     min-width: 30rem;
     height: auto;
-    padding: 1rem 1rem 1rem 1rem;
+
     border-bottom: 1px dotted black;
     font-family: Helvetica, Arial;
     font-size: 1.8rem;
+}
+
+.shopping-item span {
+    display: block;
+    width: 85%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 /* BUTTONS */
@@ -174,16 +182,17 @@ button:hover {
 .delete-button {
     justify-self: flex-end;
     min-width: 8rem;
-    margin-left: 1rem;
-    background-color: var(--main-red);
+    margin-right: 1rem;
+    background-color: var(--main-gray);
     padding: .5rem 1rem .5rem 1rem;
     border: 0px;
     border-radius: 2px;
+    color: var(--main-slate);
     font-size: 1.5rem;
 }
 
 .delete-button:hover {
-    background-color: var(--main-slate);
+    background-color: var(--main-red);
     color: whitesmoke;
     transition: background-color: .1s ease-in-out, 
                 color .1s ease-in-out;
@@ -198,7 +207,10 @@ button:hover {
 }
 
 .done {
+    background-color: var(--main-green);
     text-decoration: line-through;
+    color: var(--main-slate);
+
 }
 
 /* FOOTER */
@@ -208,7 +220,7 @@ footer {
 
 }
 
-/* Breakpoints */
+/* BREAKPOINTS */
 
 @media only screen and (min-width: 800px) {
     .list-box {
