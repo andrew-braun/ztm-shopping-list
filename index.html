@@ -8,56 +8,59 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<nav>
-			<h1>Time2Shop</h1>
-		</nav>
-		<main>
-			<div class="main-container">
-				<div class="list-box">
-					<h2>Shopping List</h2>
-					<ul class="shopping-list" id="shopping-list">
-						<li class="shopping-item">
-							<span>Bananas</span><button class="delete-button">Delete</button>
-						</li>
-						<li class="shopping-item">
-							<span>Bread</span> <button class="delete-button">Delete</button>
-						</li>
-						<li class="shopping-item">
-							<span>Radioactive material</span>
-							<button class="delete-button">Delete</button>
-						</li>
-						<li class="shopping-item">
-							<span>Puppies</span> <button class="delete-button">Delete</button>
-						</li>
-						<li class="shopping-item">
-							<span>Extra-large doggy sweaters</span>
-							<button class="delete-button">Delete</button>
-						</li>
-						<li class="shopping-item">
-							<span>75 pounds raw hamburger</span>
-							<button class="delete-button">Delete</button>
-						</li>
-						<li class="shopping-item">
-							<span>Almond milk</span
-							><button class="delete-button">Delete</button>
-						</li>
-					</ul>
-					<div id="input-section">
-						<input
-							id="user-input"
-							class="box-input"
-							type="text"
-							placeholder="enter items"
-							data-lpignore="true"
-						/>
-						<button id="enter" class="main-button">Add item</button>
+		<div class="page-container">
+			<header class="main-header">
+				<nav clas="main-nav">
+					<h1>Time2Shop</h1>
+				</nav>	
+			</header>
+			<main>
+				<div class="main-container">
+					<div class="list-box">
+						<h2>Shopping List</h2>
+						<ul class="shopping-list" id="shopping-list">
+							<li class="shopping-item">
+								<span>Bread</span> <button class="delete-button">Delete</button>
+							</li>
+							<li class="shopping-item">
+								<span>Radioactive material</span>
+								<button class="delete-button">Delete</button>
+							</li>
+							<li class="shopping-item">
+								<span>Puppies</span>
+								<button class="delete-button">Delete</button>
+							</li>
+							<li class="shopping-item">
+								<span>Extra-large doggy sweaters</span>
+								<button class="delete-button">Delete</button>
+							</li>
+							<li class="shopping-item">
+								<span>75 pounds raw hamburger</span>
+								<button class="delete-button">Delete</button>
+							</li>
+							<li class="shopping-item">
+								<span>Almond milk</span
+								><button class="delete-button">Delete</button>
+							</li>
+						</ul>
+						<div id="input-section">
+							<input
+								id="user-input"
+								class="box-input"
+								type="text"
+								placeholder="enter items"
+								data-lpignore="true"
+							/>
+							<button id="enter" class="main-button">Add item</button>
+						</div>
 					</div>
 				</div>
-			</div>
-		</main>
-		<footer>
-			<p>A learning project by Andrew Braun</p>
-		</footer>
+			</main>
+			<footer>
+				<p>A learning project by Andrew Braun</p>
+			</footer>
+		</div>
+		
 		<script src="script.js"></script>
 	</body>
 </html>
