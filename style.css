@@ -17,7 +17,7 @@ body {
 	font-size: 10px;
 	margin: 0;
     padding: 0;
-    background-color: var(--main-slate);
+	background-color: var(--main-slate);
 }
 
 h1 {
@@ -37,7 +37,7 @@ h2 {
     min-width: 0;
     width: 100%;
     min-height: 100vh;
-    height: 100%;
+	height: 100%;
 }
 
 /* HEADER */
@@ -85,6 +85,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	min-width: 32rem;
+	max-height: 75vh;
 	width: 90vw;
 	margin: 1rem;
 	background-color: #f9f9f9;
@@ -117,6 +118,7 @@ main {
 .shopping-list {
 	padding-left: 0;
 	margin-left: 0;
+	overflow-y: scroll;
 }
 
 .shopping-item {
