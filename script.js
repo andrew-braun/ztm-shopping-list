@@ -22,13 +22,13 @@ function inputLength(input) {
 function createListElement(list, input) {
     let li = document.createElement("li");
     let span = document.createElement("span");
+
     span.appendChild(document.createTextNode(input.value));
     li.appendChild(span);
-    list.appendChild(li);
+    list.insertBefore(li, list.childNodes[0]);
     li.classList.add("shopping-item");
     input.value = "";
     span.addEventListener('click', listItemComplete, false);
-
 
     let button = document.createElement("button");
     button.appendChild(document.createTextNode("Delete"));
