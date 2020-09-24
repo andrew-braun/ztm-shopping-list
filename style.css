@@ -16,7 +16,7 @@ html,
 body {
 	font-size: 10px;
 	margin: 0;
-    padding: 0;
+	padding: 0;
 	background-color: var(--main-slate);
 }
 
@@ -32,25 +32,25 @@ h2 {
 
 /* PAGE CONTAINER */
 .page-container {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    width: 100%;
-    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	width: 100%;
+	min-height: 100vh;
 	height: 100%;
 }
 
 /* HEADER */
 header {
-    flex: 0 1 auto;
+	flex: 0 1 auto;
 }
 
 nav {
-    display: flex;
-    padding: 0.5rem 2rem;
-    align-items: center;
+	display: flex;
+	padding: 0.5rem 2rem;
+	align-items: center;
 	background-color: black;
-    color: white;
+	color: white;
 }
 
 nav ul {
@@ -72,12 +72,12 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-    align-items: center;
-    flex: 1 2 auto;
+	align-items: center;
+	flex: 1 2 auto;
 }
 
 .main-container {
-    flex: 0 1 auto;
+	flex: 0 1 auto;
 }
 
 /* CONTENT BOXES */
@@ -224,10 +224,10 @@ button:hover {
 
 /* FOOTER */
 footer {
-    flex: 0 1 auto;
+	flex: 0 1 auto;
 	background-color: black;
-    color: var(--main-green);
-    text-align: center;
+	color: var(--main-green);
+	text-align: center;
 }
 
 footer p {
