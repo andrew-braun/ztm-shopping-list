@@ -1,6 +1,6 @@
 # Basic Shopping List Project
 
-A simple shopping list project created while going through the [https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/](Zero-to-Mastery Complete Web Developer) course. 
+A simple shopping list project created while going through the [Zero-to-Mastery Complete Web Developer](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery)  course. 
 
 ## Functionality
 
