@@ -13,7 +13,6 @@ A simple shopping list project created while going through the [Zero-to-Mastery 
 - Adding and deleting items from a list
 - Dynamically generating HTML/CSS with Vanilla JS
 - Selecting HTML elements with JavaScript
-- 
 
 ## Technologies
 - HTML
