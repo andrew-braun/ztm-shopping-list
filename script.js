@@ -43,43 +43,47 @@ const createListElement = (list, input) => {
 
 	/* Grab input value from event listener, insert into span */
 	span.appendChild(document.createTextNode(input.value));
+	
 	/* Append span to li */
 	li.appendChild(span);
+	li.classList.add("shopping-item");
+
+	addDeleteButton(li);
 
 	list.insertBefore(li, list.childNodes[0]);
-	li.classList.add("shopping-item");
+
+	/* Reset input value every time function is called */
 	input.value = "";
 	span.addEventListener("click", listItemComplete, false);
 
-	addDeleteButton(li);
 }
 
-function addListAfterClick() {
+const addToListAfterClick = () => {
 	if (getInputLength(shoppingListInput) > 0) {
 		createListElement(shoppingList, shoppingListInput);
 	}
 }
 
-function addListAfterKeyPress(event) {
+const addToListAfterKeyPress = (event) => {
 	if (getInputLength(shoppingListInput) > 0 && event.keyCode === 13) {
 		createListElement(shoppingList, shoppingListInput);
 	}
 }
 
 // Function for marking item complete
-function listItemComplete() {
+const listItemComplete = () => {
 	this.classList.toggle("done");
 }
 
 // Function for deleting list item
-function deleteListItem() {
+const deleteListItem = () => {
 	this.parentNode.remove();
 }
 
 // Event listener
-enterButton.addEventListener("click", addListAfterClick);
+enterButton.addEventListener("click", addToListAfterClick);
 
-shoppingListInput.addEventListener("keypress", addListAfterKeyPress);
+shoppingListInput.addEventListener("keypress", addToListAfterKeyPress);
 
 for (var i = 0; i < shoppingListItem.length; i++) {
 	shoppingListItem[i].addEventListener("click", listItemComplete, false);
