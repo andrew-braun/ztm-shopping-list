@@ -16,13 +16,12 @@ for (let i = 0; i < h2List.length; i++) {
 // Functions for creating list element with delete button
 const getInputLength = (input) => {
 	return input.value.length;
-}
-
+};
 
 const addDeleteButton = (parentElement) => {
 	/* Create new button element */
 	let button = document.createElement("button");
-	
+
 	/* Add text/class to button */
 	button.appendChild(document.createTextNode("Delete"));
 	button.classList.add("delete-button");
@@ -32,9 +31,7 @@ const addDeleteButton = (parentElement) => {
 
 	/* Add event listener that calls delete function when button is clicked */
 	button.addEventListener("click", deleteListItem, false);
-}
-
-
+};
 
 const createListElement = (list, input) => {
 	/* Create new li/span element */
@@ -43,7 +40,7 @@ const createListElement = (list, input) => {
 
 	/* Grab input value from event listener, insert into span */
 	span.appendChild(document.createTextNode(input.value));
-	
+
 	/* Append span to li */
 	li.appendChild(span);
 	li.classList.add("shopping-item");
@@ -55,32 +52,31 @@ const createListElement = (list, input) => {
 	/* Reset input value every time function is called */
 	input.value = "";
 	span.addEventListener("click", listItemComplete, false);
-
-}
+};
 
 /* On click, create list element and add to list */
 const addToListAfterClick = () => {
 	if (getInputLength(shoppingListInput) > 0) {
 		createListElement(shoppingList, shoppingListInput);
 	}
-}
+};
 
 /* On Enter key press, create list element and add to list */
 const addToListAfterKeyPress = (event) => {
 	if (getInputLength(shoppingListInput) > 0 && event.keyCode === 13) {
 		createListElement(shoppingList, shoppingListInput);
 	}
-}
+};
 
 /* Function for marking item complete */
 const markListItemComplete = () => {
 	this.classList.toggle("done");
-}
+};
 
 /* Function for deleting list item */
 const deleteListItem = () => {
 	this.parentNode.remove();
-}
+};
 
 /* Event listeners */
 addItemButton.addEventListener("click", addToListAfterClick);
