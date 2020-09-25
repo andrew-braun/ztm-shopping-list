@@ -3,7 +3,7 @@ let button = document.querySelector("button");
 let shoppingList = document.getElementById("shopping-list");
 let shoppingListItem = document.querySelectorAll(".shopping-item span");
 let deleteButton = document.getElementsByClassName("delete-button");
-let enterButton = document.getElementById("enter");
+let addItemButton = document.getElementById("add-item");
 let shoppingListInput = document.getElementById("user-input");
 
 // Apply H2 styles dynamically (just for practice)
@@ -58,35 +58,38 @@ const createListElement = (list, input) => {
 
 }
 
+/* On click, create list element and add to list */
 const addToListAfterClick = () => {
 	if (getInputLength(shoppingListInput) > 0) {
 		createListElement(shoppingList, shoppingListInput);
 	}
 }
 
+/* On Enter key press, create list element and add to list */
 const addToListAfterKeyPress = (event) => {
 	if (getInputLength(shoppingListInput) > 0 && event.keyCode === 13) {
 		createListElement(shoppingList, shoppingListInput);
 	}
 }
 
-// Function for marking item complete
-const listItemComplete = () => {
+/* Function for marking item complete */
+const markListItemComplete = () => {
 	this.classList.toggle("done");
 }
 
-// Function for deleting list item
+/* Function for deleting list item */
 const deleteListItem = () => {
 	this.parentNode.remove();
 }
 
-// Event listener
-enterButton.addEventListener("click", addToListAfterClick);
+/* Event listeners */
+addItemButton.addEventListener("click", addToListAfterClick);
 
 shoppingListInput.addEventListener("keypress", addToListAfterKeyPress);
 
+/* Loop over every existing shopping list item and add event listeners */
 for (var i = 0; i < shoppingListItem.length; i++) {
-	shoppingListItem[i].addEventListener("click", listItemComplete, false);
+	shoppingListItem[i].addEventListener("click", markListItemComplete, false);
 }
 
 for (var i = 0; i < deleteButton.length; i++) {
