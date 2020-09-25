@@ -74,13 +74,12 @@ const markListItemComplete = () => {
 };
 
 /* Function for deleting list item */
-const deleteListItem = () => {
+function deleteListItem() {
 	this.parentNode.remove();
 };
 
 /* Event listeners */
 addItemButton.addEventListener("click", addToListAfterClick);
-
 shoppingListInput.addEventListener("keypress", addToListAfterKeyPress);
 
 /* Loop over every existing shopping list item and add event listeners */
